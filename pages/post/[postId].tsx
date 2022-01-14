@@ -1,7 +1,6 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import ReactMarkdown from 'react-markdown';
 import { getAllPosts, getPostData, PostData } from '../../lib/postsUtil';
-import classes from '../../styles/common.module.css';
 
 type PostsProps = {
   post: PostData;
@@ -9,9 +8,9 @@ type PostsProps = {
 
 const PostId: NextPage<PostsProps> = ({ post }) => {
   return (
-    <div className={classes.container}>
+    <section>
       <ReactMarkdown>{post.content}</ReactMarkdown>
-    </div>
+    </section>
   );
 };
 

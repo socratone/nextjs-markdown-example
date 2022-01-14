@@ -6,8 +6,20 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+section {
+  padding: 20px;
+}
+
+ul {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+}
+
 a {
-  color: inherit;
+  color: dodgerblue;
   text-decoration: none;
 }
 

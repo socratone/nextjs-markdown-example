@@ -1,7 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
 import { getAllPosts, PostData } from '../lib/postsUtil';
-import classes from '../styles/common.module.css';
 
 type PostsProps = {
   posts: PostData[];
@@ -9,7 +8,7 @@ type PostsProps = {
 
 const Posts: NextPage<PostsProps> = ({ posts }) => {
   return (
-    <div className={classes.container}>
+    <section>
       <ul>
         {posts.map((post) => (
           <li key={post.postId}>
@@ -19,7 +18,7 @@ const Posts: NextPage<PostsProps> = ({ posts }) => {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 };
 
