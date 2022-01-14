@@ -1,6 +1,6 @@
 ---
 title: 'First Post'
-author: 'John'
+author: 'Maria'
 ---
 
 # First Post

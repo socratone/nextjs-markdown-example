@@ -1,10 +1,10 @@
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import { getAllPosts } from '../lib/postsUtil';
+import { getAllPosts, PostData } from '../lib/postsUtil';
 import classes from '../styles/common.module.css';
 
 type PostsProps = {
-  posts: { postId: string; title: string; author: string; content: string }[];
+  posts: PostData[];
 };
 
 const Posts: NextPage<PostsProps> = ({ posts }) => {
@@ -23,7 +23,7 @@ const Posts: NextPage<PostsProps> = ({ posts }) => {
   );
 };
 
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       posts: getAllPosts(),

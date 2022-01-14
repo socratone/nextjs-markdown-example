@@ -1,6 +1,6 @@
 ---
 title: 'Second Post'
-author: 'John'
+author: 'Peter'
 ---
 
 # Second Post

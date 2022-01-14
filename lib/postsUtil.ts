@@ -2,6 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 
+export type PostData = {
+  postId: string;
+  title: string;
+  author: string;
+  content: string;
+};
+
 const postsDirectory = path.join(process.cwd(), 'content/posts');
 
 const getPostsFileNames = () => {
@@ -9,7 +16,7 @@ const getPostsFileNames = () => {
   return postsFileNames;
 };
 
-const getPostData = (fileName: string) => {
+export const getPostData = (fileName: string): PostData => {
   const filePath = path.join(postsDirectory, fileName);
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);
